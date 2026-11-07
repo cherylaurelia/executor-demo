@@ -1,0 +1,141 @@
+{
+ "label": "Executor 2.0.0-beta.37 (released)",
+ "server": {
+  "name": "Executor",
+  "version": "0.1.0"
+ },
+ "capturedAt": "2026-11-07T11:50:58+00:00",
+ "steps": [
+  {
+   "tool": "search",
+   "arguments": {
+    "namespace": "paint"
+   },
+   "structuredContent": {
+    "items": [
+     {
+      "path": "tools.paint.paint",
+      "description": "Echo a color.",
+      "input": "{ nested: unknown, literalField: \"red\", [key: string]: unknown }"
+     }
+    ],
+    "namespaces": [
+     {
+      "path": "tools.paint",
+      "app": "paint"
+     }
+    ],
+    "remaining": 0,
+    "next": null,
+    "unavailableApps": []
+   },
+   "isError": false
+  },
+  {
+   "tool": "describe",
+   "arguments": {
+    "paths": [
+     "tools.paint.paint"
+    ]
+   },
+   "structuredContent": {
+    "items": [
+     {
+      "path": "tools.paint.paint",
+      "description": "Echo a color.",
+      "signature": "(input: {\n  nested: unknown,\n  literalField: \"red\",\n  [key: string]: unknown,\n}): Promise<{\n  color?: \"red\" | \"blue\",\n  [key: string]: unknown,\n}>"
+     }
+    ],
+    "namespaces": [
+     {
+      "path": "tools.paint",
+      "app": "paint"
+     }
+    ],
+    "missing": []
+   },
+   "isError": false
+  },
+  {
+   "tool": "call",
+   "arguments": {
+    "calls": {
+     "path": "tools.paint.paint",
+     "input": {
+      "nested": "green",
+      "literalField": "red"
+     }
+    }
+   },
+   "structuredContent": {
+    "status": "completed",
+    "execution": {
+     "ok": true,
+     "value": {
+      "path": "tools.paint.paint",
+      "ok": false,
+      "error": {
+       "kind": "ToolFailure",
+       "message": "InputInvalid (HTTP 422): Input failed validation: input.nested: Expected one of \"red\", \"blue\" Recovery: Change the input to the shape each problem expects, then call the tool again. Retryable (unchanged call): no. Phase: call. Reference: 39f0f896f7805a1210a9eff5316ec2bc.",
+       "response": {
+        "code": "InputInvalid",
+        "status": 422,
+        "message": "Input failed validation: input.nested: Expected one of \"red\", \"blue\"",
+        "recovery": {
+         "action": "Change the input to the shape each problem expects, then call the tool again.",
+         "instructions": "Each problem names an input path and what that path expects: a type, the values the schema allows, an object's keys (? marks an optional key, ... marks other keys allowed), an unexpected key to remove, or the alternatives a union accepts. For a union, pick one alternative and set the key that tells them apart; the problems after it are for the closest alternative. Nest each field where the tool's input type from tools.search or tools.search.describe places it, then retry."
+        },
+        "retryable": false,
+        "phase": "call",
+        "reference": "39f0f896f7805a1210a9eff5316ec2bc"
+       }
+      }
+     },
+     "toolCalls": [
+      {
+       "name": "tools.paint.paint",
+       "outcome": "failure",
+       "durationMs": 83
+      }
+     ]
+    },
+    "unavailableApps": []
+   },
+   "isError": false
+  },
+  {
+   "tool": "call",
+   "arguments": {
+    "calls": {
+     "path": "tools.paint.paint",
+     "input": {
+      "nested": "red",
+      "literalField": "red"
+     }
+    }
+   },
+   "structuredContent": {
+    "status": "completed",
+    "execution": {
+     "ok": true,
+     "value": {
+      "path": "tools.paint.paint",
+      "ok": true,
+      "value": {
+       "color": "red"
+      }
+     },
+     "toolCalls": [
+      {
+       "name": "tools.paint.paint",
+       "outcome": "success",
+       "durationMs": 6
+      }
+     ]
+    },
+    "unavailableApps": []
+   },
+   "isError": false
+  }
+ ]
+}

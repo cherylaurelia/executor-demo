@@ -1,0 +1,346 @@
+[
+ {
+  "build": "released 2.0.0-beta.37",
+  "prompt": "cancel",
+  "run": 1,
+  "turns": 6,
+  "steps": [
+   {
+    "tool": "search"
+   },
+   {
+    "tool": "skills"
+   },
+   {
+    "tool": "describe"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Cancel",
+     "style": {
+      "border": "none",
+      "background": "transparent"
+     }
+    },
+    "outcome": "422 InputInvalid"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Cancel",
+     "style": "ghost"
+    },
+    "outcome": "created"
+   }
+  ],
+  "created": true
+ },
+ {
+  "build": "released 2.0.0-beta.37",
+  "prompt": "cancel",
+  "run": 2,
+  "turns": 6,
+  "steps": [
+   {
+    "tool": "search"
+   },
+   {
+    "tool": "skills"
+   },
+   {
+    "tool": "describe"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Cancel",
+     "style": {
+      "border": "none",
+      "background": "transparent"
+     }
+    },
+    "outcome": "422 InputInvalid"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Cancel",
+     "style": "ghost"
+    },
+    "outcome": "created"
+   }
+  ],
+  "created": true
+ },
+ {
+  "build": "released 2.0.0-beta.37",
+  "prompt": "cancel",
+  "run": 3,
+  "turns": 6,
+  "steps": [
+   {
+    "tool": "search"
+   },
+   {
+    "tool": "describe"
+   },
+   {
+    "tool": "skills"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Cancel",
+     "style": {
+      "border": "none",
+      "background": "transparent"
+     }
+    },
+    "outcome": "422 InputInvalid"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Cancel",
+     "style": "ghost"
+    },
+    "outcome": "created"
+   }
+  ],
+  "created": true
+ },
+ {
+  "build": "released 2.0.0-beta.37",
+  "prompt": "save",
+  "run": 1,
+  "turns": 5,
+  "steps": [
+   {
+    "tool": "search"
+   },
+   {
+    "tool": "skills"
+   },
+   {
+    "tool": "describe"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Save",
+     "style": "outlined"
+    },
+    "outcome": "422 InputInvalid"
+   }
+  ],
+  "created": false
+ },
+ {
+  "build": "released 2.0.0-beta.37",
+  "prompt": "save",
+  "run": 2,
+  "turns": 5,
+  "steps": [
+   {
+    "tool": "search"
+   },
+   {
+    "tool": "skills"
+   },
+   {
+    "tool": "describe"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Save",
+     "style": "outlined"
+    },
+    "outcome": "422 InputInvalid"
+   }
+  ],
+  "created": false
+ },
+ {
+  "build": "released 2.0.0-beta.37",
+  "prompt": "save",
+  "run": 3,
+  "turns": 6,
+  "steps": [
+   {
+    "tool": "search"
+   },
+   {
+    "tool": "skills"
+   },
+   {
+    "tool": "describe"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Save",
+     "style": "outlined"
+    },
+    "outcome": "422 InputInvalid"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Save",
+     "style": "outline"
+    },
+    "outcome": "created"
+   }
+  ],
+  "created": true
+ },
+ {
+  "build": "fix branch",
+  "prompt": "cancel",
+  "run": 1,
+  "turns": 5,
+  "steps": [
+   {
+    "tool": "search"
+   },
+   {
+    "tool": "skills"
+   },
+   {
+    "tool": "describe"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Cancel",
+     "style": "ghost"
+    },
+    "outcome": "created"
+   }
+  ],
+  "created": true
+ },
+ {
+  "build": "fix branch",
+  "prompt": "cancel",
+  "run": 2,
+  "turns": 5,
+  "steps": [
+   {
+    "tool": "search"
+   },
+   {
+    "tool": "skills"
+   },
+   {
+    "tool": "describe"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Cancel",
+     "style": "ghost"
+    },
+    "outcome": "created"
+   }
+  ],
+  "created": true
+ },
+ {
+  "build": "fix branch",
+  "prompt": "cancel",
+  "run": 3,
+  "turns": 5,
+  "steps": [
+   {
+    "tool": "search"
+   },
+   {
+    "tool": "skills"
+   },
+   {
+    "tool": "describe"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Cancel",
+     "style": "ghost"
+    },
+    "outcome": "created"
+   }
+  ],
+  "created": true
+ },
+ {
+  "build": "fix branch",
+  "prompt": "save",
+  "run": 1,
+  "turns": 4,
+  "steps": [
+   {
+    "tool": "search"
+   },
+   {
+    "tool": "skills"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Save",
+     "style": "outline"
+    },
+    "outcome": "created"
+   }
+  ],
+  "created": true
+ },
+ {
+  "build": "fix branch",
+  "prompt": "save",
+  "run": 2,
+  "turns": 4,
+  "steps": [
+   {
+    "tool": "search"
+   },
+   {
+    "tool": "skills"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Save",
+     "style": "outline"
+    },
+    "outcome": "created"
+   }
+  ],
+  "created": true
+ },
+ {
+  "build": "fix branch",
+  "prompt": "save",
+  "run": 3,
+  "turns": 4,
+  "steps": [
+   {
+    "tool": "search"
+   },
+   {
+    "tool": "skills"
+   },
+   {
+    "tool": "call",
+    "input": {
+     "label": "Save",
+     "style": "outline"
+    },
+    "outcome": "created"
+   }
+  ],
+  "created": true
+ }
+]

@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+/* Executor's light theme (executor.sh/_astro/global.Ct17NTgv.css, 2026-11-07): surface #fff,
+   surface-2 #fafafa, ink #111, ink-2 #666, rule #eaeaea, sage #78917f / text #6f8978 /
+   wash #eef0ec; Geist and Geist Mono. */
+:root {
+  --surface: #ffffff;
+  --surface-2: #fafafa;
+  --ink: #111111;
+  --ink-2: #666666;
+  --rule: #eaeaea;
+  --sage: #78917f;
+  --sage-text: #5f7868;
+  --sage-wash: #eef0ec;
+  --bad: #b42318;
+  --bad-wash: #fdf1f0;
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-rule: var(--rule);
+  --color-sage: var(--sage);
+  --color-sage-text: var(--sage-text);
+  --color-sage-wash: var(--sage-wash);
+  --color-bad: var(--bad);
+  --color-bad-wash: var(--bad-wash);
+  --font-sans: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-sans);
+}

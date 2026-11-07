@@ -1,0 +1,116 @@
+{
+ "before": {
+  "label": "Executor 2.0.0-beta.37 (released)",
+  "capturedAt": "2026-11-07T11:50:58+00:00",
+  "searchInput": "{ nested: unknown, literalField: \"red\", [key: string]: unknown }",
+  "signature": "(input: {\n  nested: unknown,\n  literalField: \"red\",\n  [key: string]: unknown,\n}): Promise<{\n  color?: \"red\" | \"blue\",\n  [key: string]: unknown,\n}>",
+  "wrongCall": "InputInvalid (HTTP 422): Input failed validation: input.nested: Expected one of \"red\", \"blue\"",
+  "rightCall": "ok: {\"color\":\"red\"}"
+ },
+ "after": {
+  "label": "fix/nested-json-schema (built from source)",
+  "capturedAt": "2026-11-07T11:56:05+00:00",
+  "searchInput": "{ nested: \"red\" | \"blue\", literalField: \"red\", [key: string]: unknown }",
+  "signature": "(input: {\n  nested: \"red\" | \"blue\",\n  literalField: \"red\",\n  [key: string]: unknown,\n}): Promise<{\n  color?: \"red\" | \"blue\",\n  [key: string]: unknown,\n}>",
+  "wrongCall": "InputInvalid (HTTP 422): Input failed validation: input.nested: Expected one of \"red\", \"blue\"",
+  "rightCall": "ok: {\"color\":\"red\"}"
+ },
+ "bench": [
+  {
+   "build": "released 2.0.0-beta.37",
+   "prompt": "cancel",
+   "firstStyle": "{\"border\": \"none\", \"background\": \"transparent\"}",
+   "firstOutcome": "422 InputInvalid",
+   "calls": 2,
+   "created": true
+  },
+  {
+   "build": "released 2.0.0-beta.37",
+   "prompt": "cancel",
+   "firstStyle": "{\"border\": \"none\", \"background\": \"transparent\"}",
+   "firstOutcome": "422 InputInvalid",
+   "calls": 2,
+   "created": true
+  },
+  {
+   "build": "released 2.0.0-beta.37",
+   "prompt": "cancel",
+   "firstStyle": "{\"border\": \"none\", \"background\": \"transparent\"}",
+   "firstOutcome": "422 InputInvalid",
+   "calls": 2,
+   "created": true
+  },
+  {
+   "build": "released 2.0.0-beta.37",
+   "prompt": "save",
+   "firstStyle": "\"outlined\"",
+   "firstOutcome": "422 InputInvalid",
+   "calls": 1,
+   "created": false
+  },
+  {
+   "build": "released 2.0.0-beta.37",
+   "prompt": "save",
+   "firstStyle": "\"outlined\"",
+   "firstOutcome": "422 InputInvalid",
+   "calls": 1,
+   "created": false
+  },
+  {
+   "build": "released 2.0.0-beta.37",
+   "prompt": "save",
+   "firstStyle": "\"outlined\"",
+   "firstOutcome": "422 InputInvalid",
+   "calls": 2,
+   "created": true
+  },
+  {
+   "build": "fix branch",
+   "prompt": "cancel",
+   "firstStyle": "\"ghost\"",
+   "firstOutcome": "created",
+   "calls": 1,
+   "created": true
+  },
+  {
+   "build": "fix branch",
+   "prompt": "cancel",
+   "firstStyle": "\"ghost\"",
+   "firstOutcome": "created",
+   "calls": 1,
+   "created": true
+  },
+  {
+   "build": "fix branch",
+   "prompt": "cancel",
+   "firstStyle": "\"ghost\"",
+   "firstOutcome": "created",
+   "calls": 1,
+   "created": true
+  },
+  {
+   "build": "fix branch",
+   "prompt": "save",
+   "firstStyle": "\"outline\"",
+   "firstOutcome": "created",
+   "calls": 1,
+   "created": true
+  },
+  {
+   "build": "fix branch",
+   "prompt": "save",
+   "firstStyle": "\"outline\"",
+   "firstOutcome": "created",
+   "calls": 1,
+   "created": true
+  },
+  {
+   "build": "fix branch",
+   "prompt": "save",
+   "firstStyle": "\"outline\"",
+   "firstOutcome": "created",
+   "calls": 1,
+   "created": true
+  }
+ ]
+}
